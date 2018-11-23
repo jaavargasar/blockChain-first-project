@@ -18,6 +18,10 @@ contract Certifier {
     name = _name;
   }
 
+  function isOwner( ) public view returns (bool){
+    return msg.sender == owner;
+  }
+
   function getName() public view returns (string) {
     return name;
   }
